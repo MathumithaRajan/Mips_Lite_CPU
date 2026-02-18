@@ -1,0 +1,26 @@
+# Mac junk
+.DS_Store
+
+# Questa / simulation artifacts
+work/
+*.wlf
+*.log
+transcript
+
+# Compiled libraries
+*.vcd
+*.out
+
+# Temporary files
+*.tmp
+*.bak
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Build directories
+mips_lite_MS1_Trad/work/
+mips_lite_MS1_Trad/rtl/work/
