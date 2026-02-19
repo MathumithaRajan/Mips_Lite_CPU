@@ -11,6 +11,7 @@ module regfile (
     output logic [31:0] rd2
 );
 
+
     logic [31:0] regs [31:0];
 
     always_ff @(posedge clk) begin
