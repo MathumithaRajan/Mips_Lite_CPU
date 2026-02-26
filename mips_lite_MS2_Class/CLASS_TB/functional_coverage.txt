@@ -3,80 +3,51 @@ COVERGROUP COVERAGE:
 Covergroup                                             Metric       Goal    Status               
                                                                                               
 -----------------------------------------------------------------------------------------------
- TYPE /tb_pkg/coverage/cpu_cg                           60.8%        100    Uncovered            
-    covered/total bins:                                    21         45                      
-    missing/total bins:                                    24         45                      
-    % Hit:                                              46.6%        100                      
-    Coverpoint cpu_cg::cp_opcode                        60.0%        100    Uncovered            
-        covered/total bins:                                 3          5                      
-        missing/total bins:                                 2          5                      
-        % Hit:                                          60.0%        100                      
-        bin nop_addi                                       22          1    Covered              
-        bin r_type                                          1          1    Covered              
-        bin load                                            0          1    ZERO                 
+ TYPE /tb_pkg/coverage/cpu_cg                          100.0%        100    Covered              
+    covered/total bins:                                    20         20                      
+    missing/total bins:                                     0         20                      
+    % Hit:                                             100.0%        100                      
+    Coverpoint cpu_cg::cp_opcode                       100.0%        100    Covered              
+        covered/total bins:                                 5          5                      
+        missing/total bins:                                 0          5                      
+        % Hit:                                         100.0%        100                      
+        bin nop_addi                                      248          1    Covered              
+        bin r_type                                          5          1    Covered              
+        bin load                                            1          1    Covered              
         bin store                                           1          1    Covered              
-        bin branch                                          0          1    ZERO                 
-        default bin other                                   0               ZERO                 
-    Coverpoint cpu_cg::cp_funct3                        25.0%        100    Uncovered            
-        covered/total bins:                                 2          8                      
-        missing/total bins:                                 6          8                      
-        % Hit:                                          25.0%        100                      
-        bin f3_000                                         23          1    Covered              
-        bin f3_001                                          0          1    ZERO                 
+        bin branch                                          1          1    Covered              
+        default bin other                                4740               Occurred             
+    Coverpoint cpu_cg::cp_funct3                       100.0%        100    Covered              
+        covered/total bins:                                 3          3                      
+        missing/total bins:                                 0          3                      
+        % Hit:                                         100.0%        100                      
+        bin f3_000                                        251          1    Covered              
+        bin f3_001                                          2          1    Covered              
         bin f3_010                                          1          1    Covered              
-        bin f3_011                                          0          1    ZERO                 
-        bin f3_100                                          0          1    ZERO                 
-        bin f3_101                                          0          1    ZERO                 
-        bin f3_110                                          0          1    ZERO                 
-        bin f3_111                                          0          1    ZERO                 
     Coverpoint cpu_cg::cp_rd                           100.0%        100    Covered              
         covered/total bins:                                 4          4                      
         missing/total bins:                                 0          4                      
         % Hit:                                         100.0%        100                      
-        bin x0                                              6          1    Covered              
-        bin x1_x7                                           8          1    Covered              
-        bin x8_x15                                          8          1    Covered              
-        bin x16_x31                                         2          1    Covered              
-    Coverpoint cpu_cg::cp_rs1                           50.0%        100    Uncovered            
-        covered/total bins:                                 2          4                      
-        missing/total bins:                                 2          4                      
-        % Hit:                                          50.0%        100                      
-        bin x0                                             18          1    Covered              
-        bin x1_x7                                           6          1    Covered              
-        bin x8_x15                                          0          1    ZERO                 
-        bin x16_x31                                         0          1    ZERO                 
+        bin x0                                            229          1    Covered              
+        bin x1_x7                                          10          1    Covered              
+        bin x8_x15                                         11          1    Covered              
+        bin x16_x31                                         6          1    Covered              
+    Coverpoint cpu_cg::cp_rs1                          100.0%        100    Covered              
+        covered/total bins:                                 4          4                      
+        missing/total bins:                                 0          4                      
+        % Hit:                                         100.0%        100                      
+        bin x0                                            242          1    Covered              
+        bin x1_x7                                           9          1    Covered              
+        bin x8_x15                                          4          1    Covered              
+        bin x16_x31                                         1          1    Covered              
     Coverpoint cpu_cg::cp_alu_result                   100.0%        100    Covered              
         covered/total bins:                                 4          4                      
         missing/total bins:                                 0          4                      
         % Hit:                                         100.0%        100                      
-        bin zero                                            5          1    Covered              
-        bin small_pos                                      14          1    Covered              
-        bin large_pos                                       1          1    Covered              
-        bin negative                                        4          1    Covered              
-    Cross cpu_cg::cx_op_result                          30.0%        100    Uncovered            
-        covered/total bins:                                 6         20                      
-        missing/total bins:                                14         20                      
-        % Hit:                                          30.0%        100                      
-        bin <nop_addi,zero>                                 5          1    Covered              
-        bin <nop_addi,small_pos>                           12          1    Covered              
-        bin <r_type,small_pos>                              1          1    Covered              
-        bin <store,small_pos>                               1          1    Covered              
-        bin <nop_addi,large_pos>                            1          1    Covered              
-        bin <nop_addi,negative>                             4          1    Covered              
-        bin <r_type,zero>                                   0          1    ZERO                 
-        bin <load,zero>                                     0          1    ZERO                 
-        bin <store,zero>                                    0          1    ZERO                 
-        bin <branch,zero>                                   0          1    ZERO                 
-        bin <load,small_pos>                                0          1    ZERO                 
-        bin <branch,small_pos>                              0          1    ZERO                 
-        bin <r_type,large_pos>                              0          1    ZERO                 
-        bin <load,large_pos>                                0          1    ZERO                 
-        bin <store,large_pos>                               0          1    ZERO                 
-        bin <branch,large_pos>                              0          1    ZERO                 
-        bin <r_type,negative>                               0          1    ZERO                 
-        bin <load,negative>                                 0          1    ZERO                 
-        bin <store,negative>                                0          1    ZERO                 
-        bin <branch,negative>                               0          1    ZERO                 
+        bin zero                                          228          1    Covered              
+        bin small_pos                                      20          1    Covered              
+        bin large_pos                                       2          1    Covered              
+        bin negative                                        6          1    Covered              
  CLASS coverage
 
-TOTAL COVERGROUP COVERAGE: 60.8%  COVERGROUP TYPES: 1
+TOTAL COVERGROUP COVERAGE: 100.0%  COVERGROUP TYPES: 1
