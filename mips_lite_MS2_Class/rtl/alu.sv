@@ -1,4 +1,6 @@
-// ALU 
+// ALU  
+
+// alu.sv — Arithmetic Logic Unit
 
 module alu (
     input  logic [31:0] a,

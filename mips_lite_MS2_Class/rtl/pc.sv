@@ -1,4 +1,4 @@
-// Program Counter 
+// pc.sv — Program Counter
 
 module pc (
     input  logic        clk,
